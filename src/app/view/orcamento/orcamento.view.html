@@ -1,0 +1,63 @@
+<h3 id="consultaTitulo">Consulta de Orçamento</h3>
+<div class="filtros">
+    <form [formGroup]="form">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="empresa">Codigo Orçamento</label>
+                    <input type="number" class="form-control" id="codOrc" formControlName="codOrc">
+                    <!--<div class="input-error" *ngIf="!form.pristine && form.get('codOrc').hasError('required')">
+                        Empresa é obrigatória
+                    </div>!-->
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="idOrc">Identificação Orçamento</label>
+                    <input type="number" class="form-control" id="idOrc" formControlName="idOrc">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="">Empresa</label>
+                    <input type="number" class="form-control" id="empresa">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="">Filial</label>
+                    <input type="number" class="form-control" id="filial">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="">Nota de Remessa</label>
+                    <input type="number" class="form-control" id="nfRemessa">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1">
+                <button type="button" class="btn btn-success" id="btnBuscar" (click)="filtrar()">Filtrar</button>
+            </div>
+            <div class="col-md-1">
+                <button type="button" class="btn btn-success" id="btnLimpar" (click)="limpar()">Limpar</button>
+            </div>
+        </div>  
+    </form>
+</div>
+
+<!--DataTable-->
+<div>
+    <vv-table *ngIf="items.length > 0" [items]="items" [columns]="columns" key="id" [(selection)]="selectedItem">
+        <vv-table-summary>
+            <div vv-button-group>
+                <a>
+                    <button type="button" class="btn btn-success" id="consultarOrcamento">Consultar Orçamento</button>
+                </a>
+            </div>
+        </vv-table-summary>
+    </vv-table>
+</div>

@@ -1,0 +1,331 @@
+@import 'loading';
+
+
+//$primary-color: #339966;
+$primary-color: #2b5734;
+$secondary-color: #36563d;
+
+$default-border-color: #D5D5D5;
+
+
+@import 'button';
+
+.bg-primary {
+    background-color: $primary-color!important;
+}
+
+.ui-corner-all {
+    border-radius: 5px !important;;
+}
+
+
+.header {
+    margin-bottom: 1rem;
+}
+
+input {
+   outline: none!important;
+   box-shadow: none!important;
+   transition: 0.5s;
+  &:focus, {
+    border-color: $secondary-color!important;
+   }
+}
+
+.texto,{
+    padding: 0 !important;
+    border: 1px solid #d6d6d6;
+    border-radius: 5px !important;
+}
+
+.texto:focus{
+    box-shadow: 0px 0px 5px #627f6b !important;
+}
+.ui-inputtext {
+    padding: 0 !important;
+}
+.ui-inputtext.ui-state-focus, .ui-inputtext:focus {
+    box-shadow: 0px 0px 5px #627f6b !important;
+}
+
+.ui-multiselect .ui-multiselect-label {
+    display: inline !important;
+    padding: .25em 2em .25em .5em !important;
+}
+   
+.ui-dropdown .ui-dropdown-label {
+    padding-left: 0.5rem !important;
+}
+
+label {
+    display: block;
+}
+
+.ui-menuitem .ui-menuitem-link:hover {
+    border: 1px solid #5e7c68 !important;
+    color: rgb(0, 0, 0)  !important;
+	background-color: #a0c1ab !important;
+}
+
+.ui-menuitem.ui-menuitem-active > .ui-menuitem-link {
+    border: 1px solid #5e7c68 !important;
+    color: rgb(0, 0, 0)  !important;
+    background-color: #a0c1ab !important;
+    -moz-box-shadow:0 0 5px #a0c1ab !important;;
+	-webkit-box-shadow:0 0 8px #a0c1ab !important;
+	box-shadow:0 0 8px #a0c1ab !important;
+}
+
+
+.ui-menubar .ui-menuitem-link {
+    display: flex!important;
+    justify-content: space-between!important;
+    align-items: center!important;
+    &.ui-state-active {
+        align-items: center!important;
+    }
+}
+.ui-menubar .ui-submenu-list .ui-menuitem-link .ui-submenu-icon {
+    margin-left: 1rem!important;
+}
+.ui-menubar .ui-menubar-root-list>li ul {
+    //display: none;
+    min-width: max-content !important;
+}
+
+.ui-menubar .ui-submenu-list .ui-menuitem-link .ui-submenu-icon {
+    position: relative !important;
+}
+
+.ui-datepicker {
+    width: 16em !important;
+}
+
+.ui-datepicker.ui-widget .ui-datepicker-calendar td a {
+    padding: 0px!important;
+}
+
+label {
+    margin-right: 1rem;
+}
+
+
+.shadow {
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16)!important;
+    margin: 1rem 0;
+}
+
+.ui-calendar-button,
+.ui-widget.ui-button,
+.ui-button {
+    background-color: $secondary-color!important;
+    border-color: $secondary-color!important;
+    outline: none;
+    transition: 0.5s;
+    &:hover {
+        border-color: darken($secondary-color, 15%)!important;
+        background-color: darken($secondary-color, 15%)!important;
+    }
+}
+
+.btn-sm, .btn-group-sm > .btn {
+    border-radius: 0.5rem !important;
+    padding: 0.0rem 0.5rem !important;
+}
+
+.ui-paginator .ui-paginator-page.ui-state-active {
+    background: $secondary-color!important;
+    color: #ffffff;
+    border-color: $secondary-color!important;
+}
+
+.rel-info {
+    margin: 1rem 0;
+}
+.rel-info .rel-title {
+    font-weight: 300;
+    color: $primary-color;
+    font-size: 1.6rem;
+}
+
+.rel-info .proc-name {
+    font-size: 0.8rem;
+    color: #6F6F6F
+}
+
+.footer {
+    margin-top: 1rem;
+}
+
+// data table
+.ui-table {
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16)!important;
+    margin: 1rem 0;
+    padding: 1rem;
+    .ui-table-wrapper {
+        border: 1px solid $default-border-color;
+    }
+    table {
+        table-layout: auto!important;
+        th, td {
+            white-space: nowrap;
+        }
+        thead {
+            tr, th {
+                border-top: none!important;
+            }
+        }
+        tbody, thead {
+            tr > td, tr, th  {
+                &:first-child {
+                    border-left: none;
+                } 
+                &:last-child {
+                    border-right: none;
+                }
+            }
+        }
+    }
+    .ui-paginator-bottom { 
+        padding: 0.5rem;
+        background: transparent;
+    }
+    .ui-table-summary {
+        text-align: left;
+        background: transparent;
+    }
+    .ui-table-body > tr > td {
+        border: 3px;
+    }
+
+    .ui-table-tbody > tr {
+        &.ui-state-highlight, &:nth-child(even).ui-state-highlight {
+            background-color: lighten($secondary-color, 15%)!important;
+        }
+    }
+    
+}
+
+.ui-table .ui-table-thead > tr > th {
+    background-color: $secondary-color;
+    color: white;
+    &:hover, &.ui-state-hover {
+        color: white!important;
+        background-color: darken($secondary-color, 10%)!important;
+    }
+    &.ui-state-highlight {
+        background-color: darken($secondary-color, 10%);
+    }
+    a i {
+        color: white!important;
+    }
+}
+
+.ui-table .ui-table-wrapper {
+    border: 1px solid #627f6b !important;
+}
+
+.ui-table .ui-table-tbody > tr:nth-child(even) {
+    background-color: #ecf3ec !important;
+}
+
+.ui-table .ui-table-thead>tr>th, .ui-table .ui-table-tbody>tr>td, .ui-table .ui-table-tfoot>tr>td {
+    padding: 0em .7em !important;
+}
+
+.ui-dropdown-panel .ui-dropdown-item:not(.ui-state-highlight):hover {
+    border: 1px solid #627f6b !important;
+    background-color: #a0c1ab !important;
+}
+
+.ui-state-active{
+    background: #253e2b  !important;
+	border: 1px solid #ccc !important;
+	-moz-box-shadow: 0px 0px 5px #ccc !important;
+	-webkit-box-shadow: 0px 0px 5px #ccc !important;
+	box-shadow: 0px 0px 5px #ccc !important;
+}
+
+.ui-state-hover{
+	border: 1px solid #627f6b !important;
+	background: #a0c1ab !important;
+	font-weight:bold;color:#313131 !important;;
+	-moz-box-shadow:0 0 5px #a0c1ab !important;;
+	-webkit-box-shadow:0 0 8px #a0c1ab !important;
+	box-shadow:0 0 8px #a0c1ab !important;
+}
+
+.ui-state-highlight {	
+	border: 1px solid #666 !important;
+	background: #627f6b !important;
+	-moz-box-shadow: 0px 0px 5px #ccc !important;
+	-webkit-box-shadow: 0px 0px 5px #ccc !important;
+	box-shadow: 0px 0px 5px #ccc !important;
+	color: #fff !important;
+	text-shadow: 1px 1px 1px #333 !important;
+}
+
+.ui-state-focus { 
+    border:1px solid #627f6b !important;
+    background:#fff  !important;
+    font-weight:bold;color:#313131;
+    -moz-box-shadow:0 0 5px #627f6b;
+    -webkit-box-shadow:0 0 8px #627f6b !important;
+    box-shadow:0 0 8px #627f6b !important;
+}
+
+/*
+.fixtable { table-layout: auto!important; }
+.ui-datatable table { table-layout: auto !important; }
+
+
+
+
+
+*/
+// pagination padding 0.55rem;
+
+.scroll-table {
+    .ui-table-wrapper{
+        max-height: 250px;
+    }
+}
+
+// inputs
+.ui-calendar.ui-calendar-w-btn input {
+    border-top-right-radius: 0!important;
+    border-bottom-right-radius: 0!important;
+}
+
+.ui-calendar .ui-calendar-button {
+    border-top-left-radius: 0!important;
+    border-bottom-left-radius: 0!important;
+}
+
+.ng-invalid:not(.ng-pristine) .ui-inputtext.validate {
+    border-color: #ff5252!important;
+    transition: 0.3s;
+}
+
+.input-error {
+    color: #ff5252;
+    font-size: 0.8rem;
+    line-break: unset;
+    margin-top: 0.5rem;
+}
+
+.username {
+    font-size: 0.7rem;
+    margin-right: 1rem;
+    
+}
+.ui-paginator .ui-paginator-page {
+    width: 2.3em !important;
+}
+.ui-messages {
+    padding: initial !important;
+}
+.form-control{
+   height: 30px;
+   
+}
